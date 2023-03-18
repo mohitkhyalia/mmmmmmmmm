@@ -1,0 +1,27 @@
+{% extends "Nbase.html"%}
+{% load static %}
+
+{%block title%}Home | netflix{%endblock%}
+
+{%block content%}
+
+    
+    <div class="main-vid"><video class='main-vid bg-vid'  loop autoplay><source src="{% static 'videos/vid3.mp4'%}" type="Video/mp4"></video></div>
+    <div class="vid">
+        
+        <p >Best Picked</p>
+        <div class="vid-b clip1"><a class="vid-c" href="{% static 'videos/vid2.mp4'%}"><img src="{% static 'images1.jpeg'%}" alt="" style="width:100%"></a></div>
+        <div class="vid-b clip"><a class="vid-c" href="{% static 'videos/vid2.mp4'%}"><img src="{% static 'images2.jpeg'%}" alt="" style="width:100%"></a></div>
+        <div class="vid-b clip"><a class="vid-c" href="{% static 'videos/vid3.mp4'%}"><img src="{% static 'images3.jpeg'%}" alt="" style="width:100%"></a></div>
+        <div class="vid-b clip"><a class="vid-c" href="{% static 'videos/vid4.mp4'%}"><img src="{%static 'images4.jpeg'%}" alt="" style="width:100%"></video></a></div>
+        <div class="vid-b clip"><a class="vid-c" href="{% static 'videos/vid1.mp4'%}"><img src="{% static 'images1.jpeg'%}" alt="" style="width:100%"></div>
+        
+    </div>
+
+    
+    
+
+    
+</body>
+{%endblock%}
+</html>

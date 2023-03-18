@@ -1,0 +1,20 @@
+{% extends "Nbase.html"%}
+{% load static %}
+
+{%block title%}Trending | netflix{%endblock%}
+{%block content%}
+
+
+    <div class='trend'>
+        <div class="trend-box">
+            <img class='trend-img' src="{% static 'images1.jpeg'%}" alt=""><label class="trend-title" for="">Movie name</label>
+            <label class="trend-txt" for="">Movie discription rhis is the best Movie you would ever whatched</label><a class="trend-btn" href=""><span>&#10004</span></a>
+        </div>
+        <div class="trend-box">
+            <img class='trend-img' src="{% static 'images4.jpeg'%}" alt=""><label class="trend-title" for="">Movie name</label>
+            <label class="trend-txt" for="">Movie discription rhis is the best Movie you would ever whatched</label>
+        </div>
+        
+    </div>
+</body>
+{%endblock%}

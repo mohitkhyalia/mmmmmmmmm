@@ -1,0 +1,42 @@
+
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{%block title%}{%endblock%}</title>
+    <link rel="stylesheet" href="{% static 'css/home.css'%}">
+    <link rel="icon" href="https://assets.nflxext.com/ffe/siteui/common/icons/nficon2016.ico" type="image/x-icon">
+</head>
+<body>
+{%block content%}
+<body class="login-body">
+    
+    
+
+    <div class="nav hm"><nav class="nav">
+        <img id="logo" src="https://www.logo.wine/a/logo/Netflix/Netflix-Logo.wine.svg" alt="netflix" srcset="">
+    </nav></div>
+
+    <div class=" center">
+        <label for="" class="lab">Sing up</label>
+        <form  method="post">
+            {%csrf_token%}
+            <input class="login-ele" name='email'type="text" placeholder="Email or phone number">
+            <input class="login-ele" name='password'type="password" placeholder="password">
+            <input class="login-ele" name='password2'type="password" placeholder="Confirm password">
+            <input type='submit' class="login-ele">
+            <a class="login-ele2" href="login">Have a account?</a>
+        </form>
+    </div>
+    <div class="msg">
+        {% for m in messages%}
+        <h3>{{m}}</h3>
+        {%endfor%}
+    </div>
+
+    
+</body>
+{%endblock%}

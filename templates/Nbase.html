@@ -1,0 +1,28 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{%block title%}{%endblock%}</title>
+    <link rel="stylesheet" href="{% static 'css/home.css'%}">
+    <link rel="icon" href="https://assets.nflxext.com/ffe/siteui/common/icons/nficon2016.ico" type="image/x-icon">
+</head>
+<body>
+
+    <div class="nav hm"><nav class="nav">
+        <a href=""><img id="logo" src="https://www.logo.wine/a/logo/Netflix/Netflix-Logo.wine.svg" alt="netflix" srcset=""></a>
+        <li>
+            
+            <ul><a href="home">Home</a></ul>
+            <ul><a href="">New</a></ul>
+            <ul><a href="trending">Trending</a></ul>
+            <ul><a href="">By Language</a></ul>
+            <ul><a href="">My List</a></ul>
+            <ul></ul>
+        </li>
+        
+    </nav><a class="btn" href="singup">Sing up</a></div>
+    
+{%block content%}{%endblock%}

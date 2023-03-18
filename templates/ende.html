@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encrypto</title>
+</head>
+
+<body>
+    <style>
+
+        body{
+            
+            background: #075E54;
+            color:#ffff;
+          
+            
+        }
+
+        .form{
+            top:50%;
+            place-content: center;
+            display: flex;
+            position: absolute;
+            text-align: center;
+            width: 100%;
+            color:#ffff;
+        }
+        
+        .input{
+            background: transparent;
+            border:none;
+            font-size: 22px;
+            color: #e8e8e8;
+            height: 32px;
+        }
+
+        *:focus{
+            outline: none;
+        }
+        #opt{
+            display: flex;
+            background: #25D366;
+            border: none;
+            border-radius: 4px;
+            color: #252525;
+            padding: 3px;
+            font-size: 17px;
+        }
+
+        #btn-s{
+            position: absolute;
+            top:44px;
+            font-size: 20px;
+            background-color: #25D366;
+            border: none;
+            padding: 4px 19px 4px 19px;
+            border-radius: 6px;
+        }
+       
+       
+
+    </style>
+
+
+
+    
+        <form class="form" action="" method="POST" >
+          {%csrf_token%}
+            <input type="text" id="txt" class="input" placeholder="Write a message">
+            <select name="option" id="opt">
+                <option  value="Encryption">Encryption</option>
+                <option  value="Decryption">Decryption</option>
+            </select>
+            <input onclicl="postreq" id='btn-s'value="Run">
+            
+        </form>
+        <h1 id='any' >{{output}}</h1>
+        {%if messages%}
+        {%for message in messages%}
+        {{message}}
+        {%endfor%}
+        {%endif%}
+        
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+<script>
+   function postreq(event){
+    $.ajax({
+    url: '/ende',
+    type: 'post',
+    data: {
+         txt:$('#txt').val(),
+        option:$('#opt').val(),
+    },
+    headers: {
+         "X-CSRFToken":'{{csrf_token}}',
+    },
+    dataType: 'json',
+    success: function (data) {
+        document.getElementById("any").innerHTML=data
+        console.log(data)
+    }
+    
+    
+});
+            
+    
+            }
+
+        
+</script>
+
+    
+    
+</body>
+</html>

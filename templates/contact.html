@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{%block title%}Contact Me{%endblock%}
+
+{%block ul%}Home{%endblock%}
+{%block area%}
+    <div class="lft mini">
+        <label class="name hname" for=""><span style="color:#f70585;">CONTACT INFO</span></label>
+        <br>
+        <a href="https://mail.google.com/mail/u/0/?tab=wm#inbox?compose=GTvVlcRwPxSQsxxZQZfpdhNjmkmcLmGHJNbvGcKwltWfNClrPCtthDDCMsjvnKHBRtVmGsFRSQGCN"></a><label class="txt" for=""> Mail</label>
+        <a href="https://www.linkedin.com/in/mohit-n-14226725b"><label class="txt" for="">Linked In</label></a>
+        <a href="http://instagram.com/developer_mohit"><label class="txt" for="">instagram</label></a>
+        <label class="txt" for="">+91 9176*****98</label>
+    </div>
+    <div class="rht mini-r">
+        <form method="post" class="form">
+            <input class="cname f" name="username" placeholder="Name" type="text">
+            <input class="email f" type="email" name="email" placeholder="Email" required>
+            <textarea name="msg " placeholder="Enter your message here..." class="f msg" id="" cols="3" rows="1"></textarea>
+            <input type="submit"  value="Send">
+
+        </form>
+    </div>
+    {%endblock%}
